@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>PoC Chat Support</h2>
+
+  <div class="row">
+    <label>Votre nom :</label>
+    <input [(ngModel)]="sender" placeholder="ex: Nina, Agent-1" />
+  </div>
+
+  <div class="messages">
+    <div *ngFor="let m of messages" class="msg">
+      <strong>{{ m.sender }}</strong> :
+      <span>{{ m.content }}</span>
+      <small *ngIf="m.timestamp"> ({{ m.timestamp }})</small>
+    </div>
+  </div>
+
+  <div class="row">
+    <input
+      [(ngModel)]="content"
+      placeholder="Votre message..."
+      (keyup.enter)="send()"
+    />
+    <button (click)="send()">Envoyer</button>
+  </div>
+</div>
