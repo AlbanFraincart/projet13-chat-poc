@@ -3,13 +3,15 @@
 ## 🎯 Objectif
 
 Ce POC valide la faisabilité d’un système de **chat support** entre un frontend Angular et un backend Spring Boot.  
-Il ne comprend **pas de base de données**, uniquement la communication front ↔ back.
+⚠️ **Important** : le POC **ne dépend pas de la base de données**.  
+Le dossier [`bdd/`](./bdd) contient uniquement les scripts et la configuration pour mettre en place **la structure de données complète de l’application finale**, indépendamment de ce POC.
 
 ## 🏗️ Architecture du POC
 
 - **Frontend** : Angular 17 (SPA minimale).
 - **Backend** : Spring Boot 3 (API REST + WebSocket).
 - **Communication** : HTTP + WebSocket.
+- **BDD** : présente dans `bdd/`, mais **non utilisée dans ce POC**.
 
 ## 🚀 Lancer le POC
 
@@ -23,5 +25,6 @@ Voir [front/README.md](./front/README.md)
 
 ## 📖 Notes
 
-- Le code est volontairement simplifié (pas de persistance).
+- Le code est volontairement simplifié.
 - Sert uniquement à démontrer la communication en temps réel.
+- La BDD est fournie séparément pour respecter les livrables du projet.
